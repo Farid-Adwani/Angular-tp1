@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Cv } from '../cv/cvModel/Cv';
 
 @Component({
   selector: 'app-liste',
@@ -6,16 +7,15 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
   styleUrls: ['./liste.component.css']
 })
 export class ListeComponent implements OnInit {
-  @Input() listeCvs=[{}];
-  selected=0;
+  @Input() listeCvs!:Cv[];
+  cv!:Cv;
   sconstructor() { }
-  changeSelected(index:number){
-    this.selected=index;
-    this.listEvent.emit(this.selected);
-    // console.log("index= "+this.selected);
+  changeSelected(cv:Cv){
+    this.cv=cv;
+    this.listEvent.emit(this.cv);
   }
 
-  @Output() listEvent=new EventEmitter<number>();
+  @Output() listEvent=new EventEmitter<Cv>();
 
  
   

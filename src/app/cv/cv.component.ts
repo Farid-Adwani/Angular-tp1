@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Cv } from './cvModel/Cv';
 
 @Component({
   selector: 'app-cv',
@@ -6,26 +7,35 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cv.component.css']
 })
 export class CvComponent implements OnInit {
-  selected=-1;
-  cvs=[{"index":0, "prenom" : "Farid",
-  "nom" : "Adwani",
-  "age" : 22,
-  "job" : "Etudiant",
-  "image" : "farid.jpg"},
-  {"index":1,"prenom" : "AlaEddine",
-  "nom" : "Hamroun",
-  "age" : 22,
-  "job" : "Etudiant",
-  "image" : "gadget2.png"},
-  {"index":2, "prenom" : "Yosr",
-  "nom" : "Ali",
-  "age" : 21,
-  "job" : "Etudiante",
-  "image" : "gadget3.png"}
-]
+  cv!: Cv;
+  detailHidden = true;
+  cvs: Cv[] =
+    [{
+      id: 0, "firstname": "Farid",
+      name: "Adwani",
+      age: 22,
+      job: "Etudiant",
+      path: "farid.jpg"
+    },
+    {
+      id: 1, "firstname": "AlaEddine",
+      name: "Hamroun",
+      age: 22,
+      job: "Etudiant",
+      path: "gadget2.png"
+    },
+    {
+      id: 2, "firstname": "Yosr",
+      name: "Ali",
+      age: 21,
+      job: "Etudiante",
+      path: "gadget3.png"
+    }
+    ]
   constructor() { }
-  changeSelected(index:number){
-    this.selected=index;
+  changeSelected(cv: Cv) {
+    this.cv = cv;
+    this.detailHidden = false;
   }
 
   ngOnInit(): void {

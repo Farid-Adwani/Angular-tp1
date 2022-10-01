@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Cv } from '../cv/cvModel/Cv';
 
 @Component({
   selector: 'app-detail',
@@ -6,12 +7,14 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./detail.component.css']
 })
 export class DetailComponent implements OnInit {
-  @Input() listeCvs :any;
-  @Input() selected=0;
-  constructor() { }
-  getImage():string{
-    return "assets/"+this.listeCvs[this.selected].image;
-      }
+  @Input() cv!: Cv;
+  @Input() isHidden = true;
+  constructor() {
+
+  }
+  getImage(): string {
+    return "assets/" + this.cv.path;
+  }
   ngOnInit(): void {
   }
 

@@ -7,19 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class FirstComponent implements OnInit {
-  name="Farid Adwani";
-  colorDad="white";
-  age=19;
+  name = "Farid Adwani";
+  colorDad = "red";
+  age = 19;
 
   constructor() { }
-  changeName(neww:string){
-    this.name=neww;
+  changeName(neww: string) {
+    this.name = neww;
   }
-  changeColor(couleur:string){
-    this.colorDad=couleur;
+  changeColor(couleur: string) {
+    this.colorDad = couleur;
   }
-  resetColor(){
-    this.colorDad="red";
+  resetColor() {
+    this.colorDad = "red";
   }
 
   ngOnInit(): void {

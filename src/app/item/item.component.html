@@ -1,17 +1,9 @@
 <div class="container">
-   
-
-
     <div class="container mt-1 mb-1 p-1 d-flex justify-content-center ">
-        <div class="card p-4"  (click)="changeDetail()" >
-            <div class="   justify-content-center align-items-center"
-                >  <img [src]="getImage()" height="50"
-                        width="50" /><span class="name mt-3" >   {{cv.prenom}} {{cv.nom}} </span>
-                  
-
-               
-               <div class="container"></div>
-              
+        <div class="card p-4" (click)="changeDetail()">
+            <div class="   justify-content-center align-items-center"> <img [src]="getImage()" height="50"
+                    width="50" /><span class="name mt-3"> {{cv.firstname}} {{cv.name}} </span>
+                <div class="container"></div>
             </div>
         </div>
     </div>
