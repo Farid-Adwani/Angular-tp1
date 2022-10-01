@@ -1,0 +1,3 @@
+<div  *ngFor="let cvv of listeCvs">
+    <app-item [cv]="cvv" (itemEvent)="changeSelected($event)"></app-item>
+</div>

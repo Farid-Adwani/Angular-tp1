@@ -1,0 +1,12 @@
+<div class="container">
+
+    <div class="row">
+        <div class="container  col-sm">
+           
+            <app-liste [listeCvs]="cvs" (listEvent)="changeSelected($event)"></app-liste>
+        </div>
+        <div class="container  col-sm">
+            <app-detail [listeCvs]="cvs" [selected]="selected" ></app-detail>
+        </div>
+    </div>
+</div>

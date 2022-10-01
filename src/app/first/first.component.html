@@ -1,0 +1,20 @@
+
+<div class="container" >
+    <h2>
+        in Dad
+    </h2>
+    <input
+    #value
+    [value]="colorDad"
+    [style.background-color]="colorDad"
+    type="text"
+    (keyup)="changeColor(value.value)"
+    >
+</div>
+
+<div class="container"  >
+    <button class="btn btn-success" (click)="resetColor()">
+        reset color
+    </button>
+</div>
+<app-carte-visite (myFavoriteColorEvent)="changeColor($event)" [color]="colorDad"></app-carte-visite>
