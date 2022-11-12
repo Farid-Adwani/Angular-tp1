@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { CvService } from '../services/CvService/cv.service';
-import { EmbaucheService } from '../services/EmbaucheService/embauche.service';
-import { Cv } from './cvModel/Cv';
+import { Cv } from '../../models/cvModel/Cv';
+import { CvService } from '../../services/CvService/cv.service';
+import { EmbaucheService } from '../../services/EmbaucheService/embauche.service';
 
 @Component({
   selector: 'app-cv',
@@ -10,13 +10,11 @@ import { Cv } from './cvModel/Cv';
 })
 export class CvComponent implements OnInit {
   cv!: Cv;
-  isHidden = true;
 
   constructor(private cvService: CvService, private embaucheService: EmbaucheService) { }
 
   changeSelected(cv: Cv) {
     this.cv = cv;
-    this.isHidden = false;
   }
 
   getCvs(): Cv[] {

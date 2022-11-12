@@ -1,13 +1,13 @@
 <div class="container">
 
     <div class="container ">
-        <img [src]="getImage()" class="rounded logo">
+        <img [src]=image class="rounded logo">
     </div>
     <div class="row container ">
         <div class="col">
             <label for="exampleColorInput" class="form-label">Pick a Color</label>
-            <input type="color" class="form-control form-control-color picker" id="exampleColorInput" [(ngModel)]="color"
-                title="Choose your color">
+            <input type="color" class="form-control form-control-color picker" id="exampleColorInput"
+                [(ngModel)]="color" title="Choose your color">
         </div>
 
         <div class="col">

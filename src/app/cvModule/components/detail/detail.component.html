@@ -4,7 +4,7 @@
             <div class="flip-card-front">
                 <div class="card p-4">
                     <div class="center  image d-flex flex-column justify-content-center align-items-center"> <img
-                            [src]="getImage()|defaultImagePipe" height="100" width="100" /><span
+                            [src]="cv.path|defaultImagePipe" height="100" width="100" /><span
                             class="name mt-3">{{cv.firstname}}
                             {{cv.name}}</span> <span class="idd">{{cv.job}}</span>
                         <div class="d-flex flex-row justify-content-center align-items-center gap-2"> <span

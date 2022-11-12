@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Cv } from 'src/app/cv/cvModel/Cv';
+import { Cv } from '../../models/cvModel/Cv';
 
 @Injectable({
   providedIn: 'root'
@@ -11,21 +11,21 @@ export class CvService {
       name: "Adwani",
       age: 22,
       job: "Etudiant",
-      path: "farid.jpg"
+      path: "assets/farid.jpg"
     },
     {
       id: 1, "firstname": "AlaEddine",
       name: "Hamroun",
       age: 22,
       job: "Etudiant",
-      path: "gadget2.png"
+      path: "assets/gadget2.png"
     },
     {
       id: 2, "firstname": "Yosr",
       name: "Ali",
       age: 21,
       job: "Etudiante",
-      path: "gadget3.png"
+      path: "assets/gadget3.png"
     }
       ,
     {

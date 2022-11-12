@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { Cv } from '../cv/cvModel/Cv';
+import { Cv } from '../../models/cvModel/Cv';
 
 @Component({
   selector: 'app-item',
@@ -11,9 +11,7 @@ export class ItemComponent implements OnInit {
   @Output() itemEvent = new EventEmitter<Cv>();
 
   constructor() { }
-  getImage(): string {
-    return "assets/" + this.cv.path;
-  }
+  
   changeDetail() {
     this.itemEvent.emit(this.cv);
 

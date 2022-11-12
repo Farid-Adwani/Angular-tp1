@@ -10,7 +10,7 @@ export class CarteVisiteComponent implements OnInit {
   name = "Adwani";
   age = 22;
   job = "Etudiant";
-  image = "farid.jpg";
+  image = "assets/farid.jpg";
   citation = "si on veut on peut";
   description_travail = "je suis un etudiant a l'INSAT en GL4";
   mots = "Angular Nest Js";
@@ -27,9 +27,7 @@ export class CarteVisiteComponent implements OnInit {
     this.description_travail = "je suis un etudiant a l'INSAT en GL4";
     this.mots = "Angular Nest Js";
   }
-  getImage():string{
-return "assets/"+this.image;
-  }
+ 
   changeDadColor(){
     this.myFavoriteColorEvent.emit(this.myFavoriteColor);
   }

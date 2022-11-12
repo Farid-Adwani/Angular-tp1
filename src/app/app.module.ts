@@ -4,19 +4,19 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FirstComponent } from './first/first.component';
-import { CarteVisiteComponent } from './carte-visite/carte-visite.component';
-import { CvComponent } from './cv/cv.component';
-import { ListeComponent } from './liste/liste.component';
-import { ItemComponent } from './item/item.component';
-import { DetailComponent } from './detail/detail.component';
-import { HighlightDirective } from './directives/highlight/highlight.directive';
-import { WordComponent } from './word/word.component';
-import { ArcEnCielDirective } from './directives/arc_en_ciel/arc-en-ciel.directive';
-import { DefaultImagePipePipe } from './pipes/defaultImagePipe/default-image-pipe.pipe';
-import { EmbaucheListComponent } from './embauche-list/embauche-list.component';
+import { CarteVisiteComponent } from './tp1Module/components/carte-visite/carte-visite.component';
+import { HighlightDirective } from './cvModule/directives/highlight/highlight.directive';
+import { WordComponent } from './miniWordModule/components/word/word.component';
+import { ArcEnCielDirective } from './cvModule/directives/arc_en_ciel/arc-en-ciel.directive';
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FirstComponent } from './tp1Module/components/first/first.component';
+import { CvComponent } from './cvModule/components/cv/cv.component';
+import { ListeComponent } from './cvModule/components/liste/liste.component';
+import { ItemComponent } from './cvModule/components/item/item.component';
+import { EmbaucheListComponent } from './cvModule/components/embauche-list/embauche-list.component';
+import { DefaultImagePipePipe } from './cvModule/pipes/defaultImagePipe/default-image-pipe.pipe';
+import { DetailComponent } from './cvModule/components/detail/detail.component';
 
 
 @NgModule({

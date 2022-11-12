@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { Cv } from '../cv/cvModel/Cv';
+import { Cv } from '../../models/cvModel/Cv';
 
 @Component({
   selector: 'app-liste',
@@ -7,18 +7,18 @@ import { Cv } from '../cv/cvModel/Cv';
   styleUrls: ['./liste.component.css']
 })
 export class ListeComponent implements OnInit {
-  @Input() listeCvs!:Cv[];
-  cv!:Cv;
+  @Input() listeCvs!: Cv[];
+  cv!: Cv;
   sconstructor() { }
-  changeSelected(cv:Cv){
-    this.cv=cv;
+  changeSelected(cv: Cv) {
+    this.cv = cv;
     this.listEvent.emit(this.cv);
   }
 
-  @Output() listEvent=new EventEmitter<Cv>();
+  @Output() listEvent = new EventEmitter<Cv>();
 
- 
-  
+
+
 
   ngOnInit(): void {
   }

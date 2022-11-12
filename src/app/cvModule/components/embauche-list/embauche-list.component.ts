@@ -1,6 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Cv } from '../cv/cvModel/Cv';
-import { EmbaucheService } from '../services/EmbaucheService/embauche.service';
+import { Cv } from '../../models/cvModel/Cv';
 
 @Component({
   selector: 'app-embauche-list',

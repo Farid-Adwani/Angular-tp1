@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
-import { Cv } from 'src/app/cv/cvModel/Cv';
+import { Cv } from '../../models/cvModel/Cv';
 
 @Injectable({
   providedIn: 'root'
