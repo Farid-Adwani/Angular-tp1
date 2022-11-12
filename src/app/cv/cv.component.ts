@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { CvService } from '../services/CvService/cv.service';
+import { EmbaucheService } from '../services/EmbaucheService/embauche.service';
 import { Cv } from './cvModel/Cv';
 
 @Component({
@@ -8,35 +10,23 @@ import { Cv } from './cvModel/Cv';
 })
 export class CvComponent implements OnInit {
   cv!: Cv;
-  detailHidden = true;
-  cvs: Cv[] =
-    [{
-      id: 0, "firstname": "Farid",
-      name: "Adwani",
-      age: 22,
-      job: "Etudiant",
-      path: "farid.jpg"
-    },
-    {
-      id: 1, "firstname": "AlaEddine",
-      name: "Hamroun",
-      age: 22,
-      job: "Etudiant",
-      path: "gadget2.png"
-    },
-    {
-      id: 2, "firstname": "Yosr",
-      name: "Ali",
-      age: 21,
-      job: "Etudiante",
-      path: "gadget3.png"
-    }
-    ]
-  constructor() { }
+  isHidden = true;
+
+  constructor(private cvService: CvService, private embaucheService: EmbaucheService) { }
+
   changeSelected(cv: Cv) {
     this.cv = cv;
-    this.detailHidden = false;
+    this.isHidden = false;
   }
+
+  getCvs(): Cv[] {
+    return this.cvService.getAll();
+  }
+
+  getEmbauches(): Cv[] {
+    return this.embaucheService.getAll();
+  }
+
 
   ngOnInit(): void {
   }

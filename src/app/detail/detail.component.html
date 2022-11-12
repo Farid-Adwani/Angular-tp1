@@ -1,16 +1,36 @@
-<div [hidden]="isHidden" class="container" >
-        <div class="container mt-4 mb-4 p-3 d-flex justify-content-center col-sm">
-            <div class="card p-4">
-                <div class=" image d-flex flex-column justify-content-center align-items-center"
-                    >  <img [src]="getImage()" height="100"
-                            width="100" /><span class="name mt-3" >{{cv.firstname}} {{cv.name}}</span> <span
-                        class="idd">{{cv.job}}</span>
-                    <div class="d-flex flex-row justify-content-center align-items-center gap-2"> <span
-                            class="idd1">{{cv.age}} ans</span> <span><i class="fa fa-copy"></i></span> </div>
-                                   
-                   <div class="container"></div>
-                  
+<div *ngIf="cv">
+    <div class="flip-card">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <div class="card p-4">
+                    <div class="center  image d-flex flex-column justify-content-center align-items-center"> <img
+                            [src]="getImage()|defaultImagePipe" height="100" width="100" /><span
+                            class="name mt-3">{{cv.firstname}}
+                            {{cv.name}}</span> <span class="idd">{{cv.job}}</span>
+                        <div class="d-flex flex-row justify-content-center align-items-center gap-2"> <span
+                                class="id1">{{cv.age}}
+                                ans</span> <span><i class="fa fa-copy"></i></span> </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="flip-card-back">
+                <div class="card p-4">
+                    <div class="center  image d-flex flex-column justify-content-center align-items-center">
+
+
+                        <button *ngIf="embauched==false" type="button" (click)="embaucher(cv)"
+                            class="btn btn-success">Embaucher</button>
+
+
+                        <button *ngIf="embauched==true" type="button" (click)="desEmbaucher(cv)"
+                            class="btn btn-danger">Fire</button>
+
+
+
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+</div>

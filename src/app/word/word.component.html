@@ -1,0 +1,30 @@
+<div class="container">
+
+    <div class="container ">
+        <img [src]="getImage()" class="rounded logo">
+    </div>
+    <div class="row container ">
+        <div class="col">
+            <label for="exampleColorInput" class="form-label">Pick a Color</label>
+            <input type="color" class="form-control form-control-color picker" id="exampleColorInput" [(ngModel)]="color"
+                title="Choose your color">
+        </div>
+
+        <div class="col">
+            <label for="sizeInput" class="form-label">Enter a font size</label>
+            <input type="number" class="form-control form-control-number" id="sizeInput" [(ngModel)]="size"
+                title="Choose a font size">
+        </div>
+
+        <div class="col">
+            <label for="fontSelection" class="form-label">Pick a Font Family</label>
+            <select class="form-select" id="fontSelection" aria-label="Default select example" [(ngModel)]="font">
+                <option *ngFor="let font of fonts" value={{font}}>{{font}}</option>
+            </select>
+        </div>
+    </div>
+
+    <textarea ArcEnCiel class="form-control mt-3" id="exampleFormControlTextarea1" rows="3"
+        [ngStyle]="{'color': color,'font-size':size+'px','font-family':font}" [(ngModel)]="text"></textarea>
+
+</div>

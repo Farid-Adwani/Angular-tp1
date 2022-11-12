@@ -1,12 +1,14 @@
 <div class="container">
 
-    <div class="row">
+    <div class="row m-5">
         <div class="container  col-sm">
 
-            <app-liste [listeCvs]="cvs" (listEvent)="changeSelected($event)"></app-liste>
+            <app-liste [listeCvs]="getCvs()" (listEvent)="changeSelected($event)"></app-liste>
         </div>
-        <div class="container  col-sm">
-            <app-detail [cv]="cv" [isHidden]="detailHidden"></app-detail>
+        <div class="container  col-sm" [hidden]="isHidden">
+            <app-detail [cv]="cv"></app-detail>
         </div>
     </div>
+
+    <app-embauche-list [embauches]="getEmbauches()"></app-embauche-list>
 </div>

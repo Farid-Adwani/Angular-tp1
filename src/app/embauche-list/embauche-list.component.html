@@ -1,0 +1,12 @@
+<div class="container">
+    <h2>
+        Hired Condidates
+    </h2>
+</div>
+
+<div class="row">
+
+    <app-detail class="col m-1" [embauched]="true" *ngFor="let emb of embauches" [cv]="emb">
+    </app-detail>
+
+</div>

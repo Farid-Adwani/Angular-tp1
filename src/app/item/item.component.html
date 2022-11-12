@@ -1,10 +1,8 @@
-<div class="container">
-    <div class="container mt-1 mb-1 p-1 d-flex justify-content-center ">
-        <div class="card p-4" (click)="changeDetail()">
-            <div class="   justify-content-center align-items-center"> <img [src]="getImage()" height="50"
-                    width="50" /><span class="name mt-3"> {{cv.firstname}} {{cv.name}} </span>
-                <div class="container"></div>
-            </div>
+<div class="card p-1 mb-4" (click)="changeDetail()">
+    <div class="row justify-content-center align-items-center">
+        <div class="col">
+            <img [src]="getImage()|defaultImagePipe" height="50" width="50" />
         </div>
+        <span class="col center name "> {{cv.firstname}} {{cv.name}} </span>
     </div>
 </div>
