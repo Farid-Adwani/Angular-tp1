@@ -1,38 +1,65 @@
-<nav class="navbar navbar-expand-lg bg-light">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="#">TP Angular</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item" (click)="changePart('cv')">
-                    <a class="nav-link active" aria-current="page" href="#">CV</a>
-                </li>
-                <li class="nav-item" (click)="changePart('word')">
-                    <a class="nav-link" href="#">Word</a>
-                </li>
+<!doctype html>
+<html>
 
-                <li class="nav-item" (click)="changePart('tp1')">
-                    <a class="nav-link" href="#">TP1</a>
-                </li>
+<head>
+    <meta charset="utf-8">
+    <title>TP Angular</title>
+    <base href="/">
+
+</head>
+
+<body>
 
 
-            </ul>
-            <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" [routerLink]="['']">TP Angular</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a [routerLink]="['']" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
+                            class="nav-link" aria-current="page">CV</a>
+                    </li>
+                    <li class="nav-item">
+                        <a [routerLink]="['word']" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
+                            class="nav-link">Word</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a [routerLink]="['tp1']" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
+                            class="nav-link">TP1</a>
+                    </li>
+
+
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
         </div>
-    </div>
-</nav>
+    </nav>
+    <app-router-simulator></app-router-simulator>
+
+
+    <router-outlet></router-outlet>
 
 
 
 
-<app-first *ngIf="part=='tp1'"></app-first>
 
-<app-cv *ngIf="part=='cv'"></app-cv>
+    <!-- <app-first *ngIf="part=='tp1'"></app-first>
 
-<app-word *ngIf="part=='word'"></app-word>
+    <app-cv *ngIf="part=='cv'"></app-cv>
+
+    <app-word *ngIf="part=='word'"></app-word> -->
+
+
+</body>
+
+</html>

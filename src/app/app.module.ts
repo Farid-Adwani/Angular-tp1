@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -17,6 +17,11 @@ import { ItemComponent } from './cvModule/components/item/item.component';
 import { EmbaucheListComponent } from './cvModule/components/embauche-list/embauche-list.component';
 import { DefaultImagePipePipe } from './cvModule/pipes/defaultImagePipe/default-image-pipe.pipe';
 import { DetailComponent } from './cvModule/components/detail/detail.component';
+import { ROUTING } from './app.routing';
+import { Page1Component } from './tp3/components/page1/page1.component';
+import { Page2Component } from './tp3/components/page2/page2.component';
+import { RouterSimulatorComponent } from './tp3/components/router-simulator/router-simulator.component';
+import { AuthentificationFormComponent } from './cvModule/components/authentification-form/authentification-form.component';
 
 
 @NgModule({
@@ -32,7 +37,11 @@ import { DetailComponent } from './cvModule/components/detail/detail.component';
     WordComponent,
     ArcEnCielDirective,
     DefaultImagePipePipe,
-    EmbaucheListComponent
+    EmbaucheListComponent,
+    Page1Component,
+    Page2Component,
+    RouterSimulatorComponent,
+    AuthentificationFormComponent
   ],
   imports: [
     BrowserModule,
@@ -40,6 +49,9 @@ import { DetailComponent } from './cvModule/components/detail/detail.component';
     FormsModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
+    ROUTING,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

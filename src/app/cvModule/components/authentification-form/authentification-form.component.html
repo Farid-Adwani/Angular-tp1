@@ -1,0 +1,19 @@
+<div class="container m-5">
+    <form (ngSubmit)="onSubmit(form)" #form="ngForm">
+        <div class="row">
+            <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
+            <input type="text" class="form-control" id="Email" value="email@example.com" formControlName="email">
+        </div>
+        <div class="row">
+            <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+            <input type="password" class="form-control" id="inputPassword" formControlName="password">
+
+
+        </div>
+        <div class="row mt-2">
+            <div class="col-auto">
+                <button type="submit" class="btn btn-primary mb-3">Send</button>
+            </div>
+        </div>
+    </form>
+</div>

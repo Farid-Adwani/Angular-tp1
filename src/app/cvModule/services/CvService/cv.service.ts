@@ -1,3 +1,4 @@
+import { NumberFormatStyle } from '@angular/common';
 import { Injectable } from '@angular/core';
 import { Cv } from '../../models/cvModel/Cv';
 
@@ -40,5 +41,22 @@ export class CvService {
   getAll(): Cv[] {
     return this.cvs;
   }
+
+  getOne(id: number): Cv {
+    console.log(id);
+    console.log(id);
+    console.log(id);
+    console.log(id);
+    console.log(id);
+
+
+    const cv = this.cvs.find(cvv => cvv.id == id);
+    console.log(cv);
+    console.log(cv);
+    console.log(id);
+
+    return cv!;
+  }
+
   constructor() { }
 }

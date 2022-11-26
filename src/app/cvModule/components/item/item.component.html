@@ -3,6 +3,7 @@
         <div class="col">
             <img [src]="cv.path|defaultImagePipe" height="50" width="50" />
         </div>
-        <span class="col center name "> {{cv.firstname}} {{cv.name}} </span>
+        <span class="col center name "> {{cv.firstname}} {{cv.name}} <button
+                [routerLink]="['details/'+cv.id]">Details</button></span>
     </div>
 </div>

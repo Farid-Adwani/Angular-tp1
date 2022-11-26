@@ -1,0 +1,10 @@
+<div class="">
+
+    <select (change)="onSelect($event.target)" class="form-select form-select-sm" aria-label=".form-select-sm example">
+        <option selected>Select a route</option>
+        <option #selection *ngFor=" let route of routes" value={{route.path}}>{{route.path}}
+
+        </option>
+    </select>
+
+</div>

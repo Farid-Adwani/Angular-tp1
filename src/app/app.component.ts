@@ -7,9 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Tp Angular';
-  part: String = "cv";
 
-  changePart(part: String) {
-    this.part = part;
-  }
 }
