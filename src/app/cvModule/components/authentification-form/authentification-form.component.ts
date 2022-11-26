@@ -7,18 +7,26 @@ import { FormBuilder, FormControl, FormGroup, FormGroupDirective, NgForm, Valida
   styleUrls: ['./authentification-form.component.css']
 })
 export class AuthentificationFormComponent implements OnInit {
-
-
-  name = new FormControl('');
+  authForm = new FormGroup({
+    email: new FormControl('', [
+      Validators.required,
+    ]),
+    password: new FormControl('', [
+      Validators.required,
+      Validators.minLength(4)]),
+  });
   constructor(private fb: FormBuilder) {
   }
 
 
   ngOnInit(): void {
+
+
+
   }
 
-  onSubmit(formulaire: FormGroupDirective) {
-    console.log(formulaire);
+  onSubmit() {
+    console.log(this.authForm.value);
   }
 
 
